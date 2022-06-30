@@ -1,6 +1,7 @@
 package net.idrok.bogcha.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import net.idrok.bogcha.entity.GuruhXona;
@@ -30,7 +31,10 @@ public class GuruhXonaController {
     GuruhXonaService gxs;
 
     @GetMapping()
-    public ResponseEntity<Page<GuruhXona>> getMethodName(String key, Pageable pageable) {
+    public ResponseEntity<Page<GuruhXona>> getall(@RequestParam(name = "key", required = false) String key,
+            Pageable pageable) {
+        if (key == null)
+            key = "";
         return ResponseEntity.ok(gxs.getall(key, pageable));
     }
 
@@ -39,7 +43,7 @@ public class GuruhXonaController {
         return ResponseEntity.ok(gxs.create(entity));
     }
 
-    @PutMapping
+    @PutMapping()
     public ResponseEntity<GuruhXona> putMethodName(@RequestBody GuruhXona guruhXona) {
         return ResponseEntity.ok(gxs.update(guruhXona));
     }

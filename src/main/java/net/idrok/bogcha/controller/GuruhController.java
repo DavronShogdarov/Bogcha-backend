@@ -1,6 +1,5 @@
 package net.idrok.bogcha.controller;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -34,6 +33,7 @@ public class GuruhController {
             key = "";
         return ResponseEntity.ok(gs.getall(key, pageable));
     }
+
     @PostMapping()
     public ResponseEntity<Guruh> postMethodName(@RequestBody Guruh entity) {
         return ResponseEntity.ok(gs.create(entity));

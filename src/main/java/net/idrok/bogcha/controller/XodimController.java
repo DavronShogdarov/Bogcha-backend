@@ -41,7 +41,7 @@ public class XodimController {
         return ResponseEntity.ok(xs.create(entity));
     }
 
-    @PutMapping
+    @PutMapping()
     public ResponseEntity<Xodim> putMethodName(@RequestBody Xodim xodim) {
         return ResponseEntity.ok(xs.update(xodim));
     }

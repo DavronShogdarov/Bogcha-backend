@@ -1,5 +1,6 @@
 package net.idrok.bogcha.entity;
 
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -58,5 +59,7 @@ public class GuruhXona {
     public void setChiqish_vaqt(String chiqish_vaqt) {
         this.chiqish_vaqt = chiqish_vaqt;
     }
+
+    
 
 }

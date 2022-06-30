@@ -34,14 +34,7 @@ public class BolaController {
             key = "";
         return ResponseEntity.ok(bs.getall(key, pageable));
     }
-    // @GetMapping()
-    // public ResponseEntity<Page<Bola>> getall(@RequestParam(name = "key", required = false) String key,
-    //         Pageable pageable) {
-    //     if (key == null)
-    //         key = "";
-    //     return ResponseEntity.ok(bs.getall(key, pageable));
-    // }
-
+    
     @PostMapping()
     public ResponseEntity<Bola> postMethodName(@RequestBody Bola entity){
         return ResponseEntity.ok(bs.create(entity));

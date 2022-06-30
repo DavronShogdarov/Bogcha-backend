@@ -14,9 +14,9 @@ import net.idrok.bogcha.repository.XonaRepository;
 public class XonaService {
     @Autowired
     XonaRepository xr;
-
+    
     public Page<Xona> getall(String key, Pageable pageable) {
-        return xr.findAllByNomContainingIgnoreCaseAndBinoNomContainingIgnoreCaseAndInfoContainingIgnoreCase(key, key, key, pageable);
+        return xr.findAllByNomContainingIgnoreCaseOrBinoNomContainingIgnoreCaseOrInfoContainingIgnoreCase(key, key, key, pageable);
     }
 
     public Xona create(Xona xona) {

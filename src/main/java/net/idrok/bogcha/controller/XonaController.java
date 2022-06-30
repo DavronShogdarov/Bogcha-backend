@@ -34,12 +34,13 @@ public class XonaController {
             key = "";
         return ResponseEntity.ok(xs.getall(key, pageable));
     }
+
     @PostMapping()
     public ResponseEntity<Xona> postMethodName(@RequestBody Xona entity) {
         return ResponseEntity.ok(xs.create(entity));
     }
 
-    @PutMapping
+    @PutMapping()
     public ResponseEntity<Xona> putMethodName(@RequestBody Xona xona) {
         return ResponseEntity.ok(xs.update(xona));
     }

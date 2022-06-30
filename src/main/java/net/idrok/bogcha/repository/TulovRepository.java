@@ -9,5 +9,5 @@ import net.idrok.bogcha.entity.Tulov;
 
 @Repository
 public interface TulovRepository extends JpaRepository<Tulov, Long>{
-    Page<Tulov> findAllByMiqdorContainingIgnoreCaseAndSanaContainingIgnoreCaseAndBolaIsmContainingIgnoreCase(String k1, String k2,String k3, Pageable pageable); 
+    Page<Tulov> findAllByMiqdorContainingIgnoreCaseAndBolaIsmContainingIgnoreCase(String k1, String k2, Pageable pageable); 
 }

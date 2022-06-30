@@ -17,7 +17,7 @@ public class GuruhXonaService {
     GuruhXonaRepository gxs;
 
     public Page<GuruhXona> getall(String key, Pageable pageable) {
-        return gxs.findByGuruhNomAndXonaNom(key, key, pageable);
+        return gxs.findAllByGuruhNomContainingIgnoreCaseOrXonaNomContainingIgnoreCase(key, key, pageable);
     }
 
     public GuruhXona create(GuruhXona guruhXona) {

@@ -41,7 +41,7 @@ public class LavozimController {
         return ResponseEntity.ok(ls.create(entity));
     }
 
-    @PutMapping
+    @PutMapping()
     public ResponseEntity<Lavozim> putMethodName(@RequestBody Lavozim lavozim){
         return ResponseEntity.ok(ls.update(lavozim));
     }

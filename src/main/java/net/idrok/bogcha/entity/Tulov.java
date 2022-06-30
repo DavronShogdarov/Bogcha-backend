@@ -1,6 +1,6 @@
 package net.idrok.bogcha.entity;
 
-
+import java.time.LocalDate;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,7 +17,8 @@ public class Tulov {
     private Long id;
 
     private String miqdor;
-    private String sana;
+    private LocalDate sana;
+    private TulovTur tulovTur;
 
     @ManyToOne
     private Bola bola;
@@ -38,12 +39,20 @@ public class Tulov {
         this.miqdor = miqdor;
     }
 
-    public String getSana() {
+    public LocalDate getSana() {
         return sana;
     }
 
-    public void setSana(String sana) {
+    public void setSana(LocalDate sana) {
         this.sana = sana;
+    }
+    
+    public TulovTur getTulovTur() {
+        return tulovTur;
+    }
+
+    public void setTulovTur(TulovTur tulovTur) {
+        this.tulovTur = tulovTur;
     }
 
     public Bola getBola() {
@@ -54,5 +63,4 @@ public class Tulov {
         this.bola = bola;
     }
 
-    
 }

@@ -1,5 +1,6 @@
 package net.idrok.bogcha.entity;
 
+import java.time.LocalDate;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -18,7 +19,7 @@ public class Bola {
     private String familya;
     private String sharif;
     private String jins;
-    private String tug_kun;
+    private LocalDate tug_kun;
     private String ota_ism;
     private String ona_ism;
     private String tel_nomer;
@@ -65,11 +66,13 @@ public class Bola {
         this.jins = jins;
     }
 
-    public String getTug_kun() {
+
+
+    public LocalDate getTug_kun() {
         return tug_kun;
     }
 
-    public void setTug_kun(String tug_kun) {
+    public void setTug_kun(LocalDate tug_kun) {
         this.tug_kun = tug_kun;
     }
 

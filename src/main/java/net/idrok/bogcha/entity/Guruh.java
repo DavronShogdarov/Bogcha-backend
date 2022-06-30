@@ -1,5 +1,8 @@
 package net.idrok.bogcha.entity;
 
+
+import java.time.LocalDate;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -16,11 +19,11 @@ public class Guruh {
     @Column(length = 30, unique = true, nullable = false)
     private String nom;
 
-
+    
     @ManyToOne
     private Xodim xodim;
-    private String ochilgan_sana;
-    private String yopilgan_sana;
+    private LocalDate ochilgan_sana;
+    private LocalDate yopilgan_sana;
 
     public Long getId() {
         return id;
@@ -46,20 +49,21 @@ public class Guruh {
         this.xodim = xodim;
     }
 
-    public String getOchilgan_sana() {
+    public LocalDate getOchilgan_sana() {
         return ochilgan_sana;
     }
 
-    public void setOchilgan_sana(String ochilgan_sana) {
+    public void setOchilgan_sana(LocalDate ochilgan_sana) {
         this.ochilgan_sana = ochilgan_sana;
     }
 
-    public String getYopilgan_sana() {
+    public LocalDate getYopilgan_sana() {
         return yopilgan_sana;
     }
 
-    public void setYopilgan_sana(String yopilgan_sana) {
+    public void setYopilgan_sana(LocalDate yopilgan_sana) {
         this.yopilgan_sana = yopilgan_sana;
     }
+
 
 }

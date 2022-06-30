@@ -9,6 +9,5 @@ import net.idrok.bogcha.entity.Xona;
 
 @Repository
 public interface XonaRepository extends JpaRepository<Xona, Long> {
-    // Page<Xona> findByNomAndBinoNomAndInfo(String k1, String k2, Pageable pageable);
-    Page<Xona> findAllByNomContainingIgnoreCaseAndBinoNomContainingIgnoreCaseAndInfoContainingIgnoreCase(String k1, String k2, String k3, Pageable pageable); 
+    Page<Xona> findAllByNomContainingIgnoreCaseOrBinoNomContainingIgnoreCaseOrInfoContainingIgnoreCase(String k1, String k2, String k3, Pageable pageable); 
 }

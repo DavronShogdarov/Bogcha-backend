@@ -16,7 +16,7 @@ public class TulovService {
     TulovRepository tr;
 
     public Page<Tulov> getall(String key, Pageable pageable) {
-        return tr.findAllByMiqdorContainingIgnoreCaseAndSanaContainingIgnoreCaseAndBolaIsmContainingIgnoreCase(key, key, key, pageable);
+        return tr.findAllByMiqdorContainingIgnoreCaseAndBolaIsmContainingIgnoreCase(key, key, pageable);
     }
 
     public Tulov create(Tulov tulov) {

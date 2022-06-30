@@ -11,6 +11,6 @@ import net.idrok.bogcha.entity.GuruhXona;
 
 @Repository
 public interface GuruhXonaRepository extends JpaRepository<GuruhXona, Long>{
-    Page<GuruhXona> findByGuruhNomAndXonaNom(String guruh, String xona, Pageable pageable);
+    Page<GuruhXona> findAllByGuruhNomContainingIgnoreCaseOrXonaNomContainingIgnoreCase(String k1, String k2, Pageable pageable); 
 }
 
